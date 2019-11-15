@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Welcome <%=user.username %></h2>
+
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Email</th> 
+  </tr>
+  <tr>
+    <td><%=user.username %></td>
+    <td><%=user.email %></td>
+    <td><a href="/edit">Edit me</a></td>
+  </tr>
+</table>
+ <a href="/logout">Logout</a>
+</body>
+</html>

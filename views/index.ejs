@@ -1,0 +1,30 @@
+<html>
+ <head>
+ 	<link rel="stylesheet" type="text/css" href="assets/style.css">
+ 	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+ </head>
+  <body>
+    <h1>Login</h1>
+    <% if (typeof success_msg != 'undefined' && success_msg) { %>
+<div class="alert alert-success"><%- success_msg %>
+</div>
+<% } %>
+    <form method="POST" action="/users">
+    	Email: <input type="email" id="email" name="email">  <br></br>
+
+    	password: <input type="password" id="password" name="password">  <br></br>
+    	<input type="submit" value="Submit">
+    </form>
+
+    <a href="/register">Register</a>
+    <!--<script type="text/javascript">
+    	$.ajax({
+    		type: "POST",
+    		url:  "/personjson",
+    		data: JSON.stringify({firstname:'sidhu', lastname:'C'}),
+    		dataType:'json',
+    		contentType: 'application/json'
+    	})
+    </script>-->
+  </body>
+</html> 
