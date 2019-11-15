@@ -10,7 +10,7 @@ const Joi = require('joi');
 Joi.objectId = require('joi-objectid')(Joi);
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/myapp1')
+mongoose.connect('mongodb+srv://sidharthan:sidhu564@@cluster0-euzw4.mongodb.net/myapp?retryWrites=true&w=majority') 
     .then(() => console.log('Now connected to MongoDB!'))
     .catch(err => console.error('Something went wrong', err));
 
