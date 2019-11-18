@@ -24,7 +24,7 @@ var options = {
   } 
 };
 
-mongoose.connect('mongodb+srv://sidharthan:sidhu564@@cluster0-euzw4.mongodb.net/myapp?retryWrites=true&w=majority', options) 
+mongoose.connect('mongodb+srv://sidharthan:sidhu564%40%40cluster0-euzw4.mongodb.net/myapp?retryWrites=true&w=majority', options) 
     .then(() => console.log('Now connected to MongoDB!'))
     .catch(err => console.error('Something went wrong', err));
 
