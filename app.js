@@ -10,23 +10,14 @@ const Joi = require('joi');
 Joi.objectId = require('joi-objectid')(Joi);
 const mongoose = require('mongoose');
 
-var options = { 
-  server: { 
-    socketOptions: { 
-      keepAlive: 300000, connectTimeoutMS: 30000 
-    } 
-  }, 
-  replset: { 
-    socketOptions: { 
-      keepAlive: 300000, 
-      connectTimeoutMS : 30000 
-    } 
-  } 
-};
 
-mongoose.connect('mongodb+srv://sidharthan:sidhu564%40%40cluster0-euzw4.mongodb.net/myapp?retryWrites=true&w=majority', options) 
-    .then(() => console.log('Now connected to MongoDB!'))
-    .catch(err => console.error('Something went wrong', err));
+
+mongoose.connect('mongodb+srv://sidharthan:sidharthan123@cluster0-euzw4.mongodb.net/myapp1?retryWrites=true&w=majority', {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false
+})
 
 //end
 var apiController = require('./controllers/apiController');
